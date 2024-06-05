@@ -8,9 +8,3 @@
 #   with-sources: false
 
 -e file:.
-pyqt6==6.7.0
-    # via flashiestcards
-pyqt6-qt6==6.7.1
-    # via pyqt6
-pyqt6-sip==13.6.0
-    # via pyqt6
