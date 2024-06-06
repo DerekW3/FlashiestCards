@@ -1,5 +1,4 @@
 import sqlite3
-from datetime import datetime
 
 
 def establish_db_connection() -> sqlite3.Connection:
@@ -15,6 +14,18 @@ def create_flashcards_table():
     try:
         db_connection: sqlite3.Connection = establish_db_connection()
         db_cursor: sqlite3.Cursor = db_connection.cursor()
+
+        db_cursor.execute(
+            """
+        CREATE TABLE IF NOT EXISTS flashcards(
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            question VARCHAR(255) NOT NULL,
+            answer VARCHAR(255) NOT NULL
+        )
+        """
+        )
+        db_connection.commit()
+        db_cursor.close()
 
     except sqlite3.Error as e:
         print(f"Error creating flashcards table: {e}")
