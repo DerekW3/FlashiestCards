@@ -6,6 +6,7 @@ authors = [
     { name = "DerekW3", email = "92753567+DerekW3@users.noreply.github.com" },
 ]
 dependencies = [
+    "customtkinter>=5.2.2",
 ]
 readme = "README.md"
 requires-python = ">= 3.12"

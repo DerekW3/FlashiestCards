@@ -8,3 +8,9 @@
 #   with-sources: false
 
 -e file:.
+customtkinter==5.2.2
+    # via flashiestcards
+darkdetect==0.8.0
+    # via customtkinter
+packaging==24.0
+    # via customtkinter
